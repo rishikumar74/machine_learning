@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+	<siteMapNode url="~/Home.aspx" title="Home" description="Home Dashboard">
+		<siteMapNode url="~/StudentRegistration.aspx" title="Register Student" description="Registration Page" />
+		<siteMapNode url="~/StudentList.aspx" title="Student Directory" description="Directory Page" />
+		<siteMapNode url="~/Courses.aspx" title="Courses &amp; Branches" description="Curriculum and Branches" />
+		<siteMapNode url="~/ContactUs.aspx" title="Contact Us" description="Campus Address and Contacts" />
+	</siteMapNode>
+</siteMap>

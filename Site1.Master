@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication11.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>CVR College Student Management System</title>
+    <link href="StyleSheet1.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- SiteMapDataSource powers Menu, TreeView, and SiteMapPath -->
+        <asp:SiteMapDataSource ID="SiteMapData" runat="server" ShowStartingNode="true" />
+
+        <!-- Top Header -->
+        <div class="college-header">
+            <h1>CVR College of Engineering</h1>
+            <p>Student Management System | In Association with Cherabuddi Education Society</p>
+        </div>
+
+        <!-- Navigation Control 1: Menu Control -->
+        <div class="nav-bar">
+            <asp:Menu ID="TopMenu" runat="server" DataSourceID="SiteMapData" Orientation="Horizontal"
+                      StaticDisplayLevels="2" StaticMenuItemStyle-HorizontalPadding="15px">
+            </asp:Menu>
+        </div>
+
+        <!-- Navigation Control 2: SiteMapPath (Breadcrumbs) -->
+        <div class="breadcrumb-container">
+            <span>Location: </span>
+            <asp:SiteMapPath ID="Breadcrumbs" runat="server" PathSeparator=" &gt; " />
+        </div>
+
+        <div class="layout-body">
+            <!-- Navigation Control 3: TreeView Sidebar -->
+            <div class="side-nav">
+                <h4>Quick Explorer</h4>
+                <asp:TreeView ID="SideTree" runat="server" DataSourceID="SiteMapData" 
+                              ExpandDepth="2" NodeIndent="10">
+                </asp:TreeView>
+            </div>
+
+            <!-- Content Area for Child Pages -->
+            <div class="content-panel">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="college-footer">
+            &copy; 2026 CVR College of Engineering, Vastunagar, Mangalpalli (V), Ibrahimpatnam, RR Dist, Telangana.
+        </div>
+    </form>
+</body>
+</html>
